@@ -18,3 +18,5 @@ require('lazy').setup("plugins")
 
 -- All non plugin related (vim) options
 require("options")
+
+require("mappings")
