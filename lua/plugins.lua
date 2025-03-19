@@ -40,4 +40,11 @@ return {
 		},
 		config = function() require("config.treesitter") end,
 	},
+	{
+		"mbbill/undotree",
+		keys = {
+			{ "<leader>u", "<cmd>UndotreeToggle<CR>", desc = "Toggle Undotree" },
+			{ "<leader>U", "<cmd>UndotreeFocus<CR>", desc = "Focus Undotree" }
+		},
+	},
 }
