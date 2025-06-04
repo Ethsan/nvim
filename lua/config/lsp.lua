@@ -18,6 +18,8 @@ local server_opts = {
 			"--rename-file-limit=0",
 			"--background-index",
 			"--background-index-priority=normal",
+			"--clang-tidy",
+			"--malloc-trim"
 		},
 		filetypes = {"c", "cpp", "objc", "objcpp"},
 	},
@@ -103,8 +105,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
     bufmap('n', 'grt', '<cmd>lua vim.lsp.buf.type_definition()<CR>zz')
     bufmap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
     bufmap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>')
-    bufmap('n', '<leader>f', '<cmd>lua vim.lsp.buf.format()<CR>')
     bufmap('n', '<leader>r', '<cmd>lua vim.lsp.buf.rename()<CR>')
+    bufmap('n', '<leader>a', '<cmd>lua vim.lsp.buf.code_action()<CR>')
   end
 })
 
